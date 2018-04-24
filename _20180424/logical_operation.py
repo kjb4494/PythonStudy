@@ -16,9 +16,9 @@ def lo_test_02():
         print("z가 없습니다.")
 
 def lo_test_03():
-    slist = [n for n in range(10, 21)]
-    if 12 in slist:
-        print(slist.index(12))
+    sList = [n for n in range(10, 21)]
+    if 12 in sList:
+        print(sList.index(12))
     else:
         print("not exist")
 
