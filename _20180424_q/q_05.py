@@ -13,10 +13,8 @@ def q_05():
             if 0 <= num01 and 0 <= num02:
                 if num01 > num02:
                     num01, num02 = num02, num01
-                nList = []
                 for i in range(num01, num02 + 1):
-                    nList.append(str(i))
-                print(" ".join(nList))
+                    print(i, end=" ")
                 return
             else:
                 print("자연수를 입력해주세요.")

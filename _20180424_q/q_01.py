@@ -6,10 +6,8 @@ def q_01():
     while True:
         try:
             sList = [i for i in map(int, input("정수 10개 입력: ").split(' '))][:10]
-            even_sum = [sList[i] for i in range(len(sList)) if (i+1) % 2 == 0]
-            odd_sum = [sList[i] for i in range(len(sList)) if (i+1) % 2 == 1]
-            print("짝수의 합: %d" % sum(even_sum))
-            print("홀수의 평균: %.1f" % (sum(odd_sum)/len(odd_sum)))
+            print("짝수의 합: %d" % sum([sList[i] for i in range(1, len(sList), 2)]))
+            print("홀수의 평균: %.1f" % round(sum([sList[i] for i in range(0, len(sList), 2)])/5, 2))
             return
         except Exception as e:
             print("입력 값이 잘못되었습니다.", e)

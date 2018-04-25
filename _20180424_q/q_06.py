@@ -18,5 +18,6 @@ def q_06():
             if nList[nCount - 1] is None:
                 continue
             print(" ".join([str(i) for i in nList[::-1]]))
+            return
         except Exception as e:
             print("입력 값이 잘못되었습니다.", e)

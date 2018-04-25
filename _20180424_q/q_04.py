@@ -7,12 +7,7 @@ def q_04():
     while True:
         try:
             num1, num2 = map(int, input("두 정수 입력: ").split(' '))
-            if num1 > num2:
-                print(">")
-            elif num1 < num2:
-                print("<")
-            else:
-                print("=")
+            print(">" if num1 > num2 else "<" if num1 < num2 else "=")
             return
         except Exception as e:
             print("입력 값이 잘못되었습니다.", e)
