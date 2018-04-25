@@ -1,4 +1,3 @@
-import math
 
 def q_07():
     #  두 수를 입력받아 최대공약수,최소 공배수를 구하는 프로그램을 작성하시오.
@@ -15,11 +14,19 @@ def q_07():
             if not (1 <= num01 <= 100000 and 1 <= num02 <= 100000):
                 print("입력 범위가 잘못되었습니다.")
                 continue
-            print("%d %d" % (math.gcd(num01, num02), num01 * num02 / math.gcd(num01, num02)))
+            print("%d %d" % (euclid_method_gcd(num01, num02), euclid_method_lcm(num01, num02)))
             return
 
         except Exception as e:
             print("입력 값이 잘못되었습니다.", e)
 
-def euclid_solve(a, b):
-    print("Hello")
+def euclid_method_gcd(a, b):
+    mod = a % b
+    while mod > 0:
+        a = b
+        b = mod
+        mod = a % b
+    return b
+
+def euclid_method_lcm(a, b):
+    return a * b // euclid_method_gcd(a, b)

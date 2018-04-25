@@ -1,7 +1,6 @@
 
-def sort_test_01():
+def sort_test():
     # 정렬 (SORTED)
-
 
     # 구현할 수 있어야한다.
 
@@ -38,51 +37,5 @@ def sort_test_01():
     print(vList)
     print("{0}".format(vList))
 
-def sort_test_02():
-
-    # 집합(SET)
-    #   - 구조적인 성질:
-    #       1) Not Order
-    #       2) 중복을 허락하지 않는다.
-    #   - 종류                    중요
-    #       1) 여집합
-    #       2) intersection set => *
-    #       3) union set        => *
-    #       4) 부분집합
-    #       5) difference set   => *
-    #       6) 곱집합('.')
-    #       7) 대칭 차집합       => *
-
-    # 대칭 차집합: http://j1w2k3.tistory.com/329
-
-    set_A = {10, 11, 12, 13}
-    set_B = {11, 13, 15, 17}
-
-    print(type(set_A))  # SET
-
-    # 교집합(Intersection)
-    # SET_INTER = set_A.intersection(set_B)
-    SET_INTER = set_A & set_B
-    print(SET_INTER)        # 11, 13
-
-    # 합집합(Union set)
-    # SET_UNI = set_A.union(set_B)
-    SET_UNI = set_A | set_B
-    print(SET_UNI)          # 10, 11, 12, 13, 15, 17
-
-    # 차집합(Difference set)
-    # SET_DIF = set_A.difference(set_B)
-    SET_DIF = set_A - set_B
-    print(SET_DIF)          # 10, 12
-
-    # 대칭 차집합(sysmmetric deffierence set)
-    SET_SYM = set_A ^ set_B
-    print(SET_SYM)          # 10, 12, 15, 17
-
-    # 문자열을 집합으로 변환
-    set_result = set("hello wolrd hello hello world hello world")
-    print(set_result)       # 집합의 구조적 성질: 중복을 허용하지 않는다.
-
 def sort_output():
-    # sort_test_01()
-    sort_test_02()
+    sort_test()
