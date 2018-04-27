@@ -51,6 +51,48 @@
 #   010-1234-1234
 #   010-123-1234
 #   re.compile("(\d{3})-(\d{3,4})-(\d{4})")
+#
+#   (\d{3})-(\d{3,5})-(\d{4})
+#
+#
+#  '(' : 우선순위 0순위
+#  '\d' : d == decimal == [0-9]
+#  '{3}' : 갯수 (3)
+#  032-1234-1234
+#  032-123-1234
+#
+#  (12) \w : [a-zA-Z0-9 ]
+# 	ex) re.compile('\w+pple')
+# 		apple , Apple, 0pple,  pple
+#  (13) \W : [^a-zA-Z0-9 ]
+#
+#  (14) \D : \d
+#
+#  (15) \s : [ \t\n\r\f\v]
+#
+#  (16) \S : \s의 여집합
+#
+#  flag -----------------------
+#
+#  f = re.compile(pattern, flag)
+#  flag = r.I or r.IGNORECASE : 대소문자를 구별하지 않겠습니다.
+#
+#  예)
+#  f = re.compile(pattern = '^apple', flag = r.I or r.IGNORECASE)
+#  str1 = "apple"
+#  str2 = "APPLE"
+#
+#  f.search(str1) => true / false : None
+#  f.search(str2) => true / false : None
+#
+#  f.match()   vs     f.search()
+#  시작위치             문자열 전체에서 대상을 찾음 (물론 ^, $)
+#
+#  s = "hello world"
+#  f = re.compile("world")
+#  print(f.search(s))   =>  span
+#  print(f.match(s))    =>  None
+
 
 import re
 
@@ -75,11 +117,13 @@ def reg_exp_test_02():
         if not f.search(s) is None:
             print(s)
 
+
 def reg_exp_test_03():
     f = re.compile("^da")
     strValue = "da dododfm dcde apple daidrag app"
     result = f.search(strValue)
     print(result)
+
 
 def reg_exp_test_04():
     f = re.compile("(\d{1,3}).(\d{1,3}).(\d{1,3}).(\d{1,3})")
@@ -88,8 +132,18 @@ def reg_exp_test_04():
     v = result.span()
     print(MyIp[v[0]:v[1]])
 
+
+def last_test():
+    nData = "hello world"
+    for s in list(nData):
+        if s =='l':
+            s='a'
+        print(s)
+
+
 def reg_exp_output():
     # reg_exp_test_01()
     # reg_exp_test_02()
     # reg_exp_test_03()
-    reg_exp_test_04()
+    # reg_exp_test_04()
+    last_test()
