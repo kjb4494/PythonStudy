@@ -1,1 +1,1 @@
-__all__=['class_example']
+__all__=['class_example', 'encryption_example']
