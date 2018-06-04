@@ -133,17 +133,8 @@ def reg_exp_test_04():
     print(MyIp[v[0]:v[1]])
 
 
-def last_test():
-    nData = "hello world"
-    for s in list(nData):
-        if s =='l':
-            s='a'
-        print(s)
-
-
 def reg_exp_output():
     # reg_exp_test_01()
     # reg_exp_test_02()
     # reg_exp_test_03()
-    # reg_exp_test_04()
-    last_test()
+    reg_exp_test_04()
