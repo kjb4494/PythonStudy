@@ -7,6 +7,7 @@ from _20180425_q import Output_20180425_q
 from _20180426 import Output_20180426
 from _20180427 import Output_20180427
 from _20180604 import Output_20180604
+from _20180605 import Output_20180605
 
 
 def main():
@@ -18,7 +19,8 @@ def main():
     # Output_20180425_q.output_20180425_q()
     # Output_20180426.output_20180426()
     # Output_20180427.output_20180427()
-    Output_20180604.output_20180604()
+    # Output_20180604.output_20180604()
+    Output_20180605.output_20180605()
 
 if __name__ == "__main__":
     main()
